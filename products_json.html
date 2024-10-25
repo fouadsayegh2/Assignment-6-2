@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Products JSON</title>
+    <style>
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        pre {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            font-family: 'Courier New';
+            margin: 20px;
+        }
+    </style>
+    <script>
+        const products = [
+            {
+                "name": "Vintage T-shirt",
+                "description": "Tie-dye Grateful Dead T-shirt",
+                "price": 35,
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Smartphone",
+                "description": "Latest model with OLED display",
+                "price": 999,
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Bluetooth Speaker",
+                "description": "Portable and waterproof",
+                "price": 120,
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Leather Jacket",
+                "description": "Classic black leather biker jacket",
+                "price": 200,
+                "categories": ["clothing"]
+            },
+            {
+                "name": "Canvas Backpack",
+                "description": "Durable and eco-friendly",
+                "price": 75,
+                "categories": ["accessories"]
+            },
+            {
+                "name": "Wireless Headphones",
+                "description": "Noise-canceling and over-ear",
+                "price": 350,
+                "categories": ["electronics", "accessories"]
+            },
+            {
+                "name": "Running Shoes",
+                "description": "Lightweight and comfortable",
+                "price": 150,
+                "categories": ["clothing", "accessories"]
+            },
+            {
+                "name": "Coffee Maker",
+                "description": "Automatic drip coffee machine",
+                "price": 80,
+                "categories": ["kitchen"]
+            }
+        ];
+
+        function displayProducts() {
+            const jsonString = JSON.stringify(products, null, 2);
+            document.getElementById("jsonDisplay").textContent = jsonString;
+        }
+
+        window.onload = displayProducts;
+    </script>
+</head>
+<body>
+    <h1>Product List (JSON)</h1>
+    <pre id="jsonDisplay"></pre>
+</body>
+</html>
